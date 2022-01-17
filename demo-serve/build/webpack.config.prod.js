@@ -23,7 +23,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      filename: '../src/index.html',
+      template: '../src/index.html',
       minify: false,
     }),
     new MiniCssExtractPlugin({
