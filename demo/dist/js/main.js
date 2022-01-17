@@ -1,1 +1,1 @@
-(()=>{"use strict";var e={307:(e,o,r)=>{r.r(o)}},o={};function r(t){var n=o[t];if(void 0!==n)return n.exports;var l=o[t]={exports:{}};return e[t](l,l.exports,r),l.exports}r.r=e=>{"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},r(307),console.log("index.js"),console.log(1)})();
+(()=>{"use strict";console.log("index.js"),console.log(1)})();
