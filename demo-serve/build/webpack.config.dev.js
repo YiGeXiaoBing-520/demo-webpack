@@ -1,13 +1,12 @@
 const path = require('path');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { merge } = require('webpack-merge');
+const base = require('./webpack.config.base');
 
-module.exports = {
+module.exports = merge(base, {
   mode: 'development',
-  entry: path.resolve(__dirname, '../src/main.js'),
   output: {
-    path: path.resolve(__dirname, '../dist'),
-    filename: '[name].js',
+    filename: 'js/[name].js',
+    chunkFilename: 'js/chunk-[name].js',
   },
   devServer: {
     port: 9001,
@@ -17,14 +16,16 @@ module.exports = {
     rules: [
       {
         test: /\.css$/i,
-        use: [MiniCssExtractPlugin.loader, 'css-loader'],
+        use: [
+          'style-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              esModule: false,
+            },
+          },
+        ],
       },
     ],
   },
-  plugins: [
-    new HtmlWebpackPlugin({
-      filename: '../src/index.html',
-      minify: false,
-    }),
-  ],
-};
+});
