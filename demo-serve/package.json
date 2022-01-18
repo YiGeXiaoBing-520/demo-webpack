@@ -9,10 +9,13 @@
     "build1": "webpack --config ./build/webpack.config.prod.js --progress"
   },
   "devDependencies": {
+    "chalk": "~4.1.2",
     "css-loader": "^6.5.1",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.5.0",
     "mini-css-extract-plugin": "~2.4.0",
+    "ora": "~5.4.1",
+    "rimraf": "^3.0.2",
     "sass": "^1.48.0",
     "sass-loader": "^12.4.0",
     "style-loader": "^3.3.1",
